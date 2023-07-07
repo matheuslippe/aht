@@ -1,0 +1,15 @@
+valores = [133, 61]
+media = sum(valores) / len(valores)
+
+def convert(seconds): 
+  seconds = seconds % (24 * 3600) 
+  hour = seconds // 3600
+  seconds %= 3600
+  minutes = seconds // 60
+  seconds %= 60
+
+  return "%d:%02d:%02d" % (hour, minutes, seconds) 
+
+qtd =  len(valores)
+n = media
+print("AHT:", convert(n), "- Numero de ligações:", qtd)
